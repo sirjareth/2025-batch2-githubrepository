@@ -5,10 +5,7 @@
  */
 package com.joysistvi.stage1.exercises;
 
-/**
- *
- * @author Yuno
- */
+
 public class Exercise4_2_Ronquillo {
     public static void main(String[] args) {
         int N = 5; 
@@ -20,5 +17,6 @@ public class Exercise4_2_Ronquillo {
         }
 
         System.out.println("Final Product: " + product);
+        
     }
 }
