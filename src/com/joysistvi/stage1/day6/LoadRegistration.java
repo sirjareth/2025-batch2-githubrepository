@@ -113,15 +113,13 @@ public class LoadRegistration {
                         case 6:
                             System.out.println("Are you sure you want to exit? \n[Y] Yes [N] No");
                             System.out.print("Enter your choice: ");
-                            String exitChoice = scanner.nextLine();
+                            char exitChoice = scanner.nextLine().trim().toUpperCase().charAt(0);
                             switch (exitChoice) {
-                                case "Y":
-                                case "y":
+                                case 'Y':
                                     System.out.println("* Thank you *");
                                     running = false;
                                     break;
-                                case "N":
-                                case "n":
+                                case 'N':
                                     System.out.println("Go Back to Main Menu");
                                     break;
                                 default:

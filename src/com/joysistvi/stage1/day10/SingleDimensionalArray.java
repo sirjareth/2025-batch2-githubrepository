@@ -11,22 +11,26 @@ public class SingleDimensionalArray {
 
     public static void main(String[] args) {
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter size: ");
-        int size = scanner.nextInt();
-        scanner.nextLine();
-        String[] planets = new String[size];
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter size: ");
+//        int size = scanner.nextInt();
+//        scanner.nextLine();
+//        String[] planets = new String[size];
+//        
+//        for (int i = 0; i < planets.length; i++) {
+//            System.out.print("Enter planet[" + i + "]: ");
+//            planets[i] = scanner.nextLine();
+//        }
+//
+//        System.out.println("Displaying all the planets: ");
+//        for(String planet : planets){
+//            System.out.println(planet);
+//        }
         
-        for (int i = 0; i < planets.length; i++) {
-            System.out.print("Enter planet[" + i + "]: ");
-            planets[i] = scanner.nextLine();
-        }
-
-        System.out.println("Displaying all the planets: ");
-        for(String planet : planets){
-            System.out.println(planet);
-        }
         
+        
+        int[] ages = {22, 23, 31, 19, 24};
+        System.out.println(ages[7]);
     }
 }
 
@@ -34,7 +38,7 @@ public class SingleDimensionalArray {
 /*
     //indices:        0   1    2   3   4
         int[] ages = {22, 23, 31, 19, 24};
-        
+        ages[0];
         
         // Traversing an array using for loop
         //              i < 5
