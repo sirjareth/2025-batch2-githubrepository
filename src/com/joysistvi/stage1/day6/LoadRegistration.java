@@ -7,6 +7,8 @@ package com.joysistvi.stage1.day6;
 
 import java.util.Scanner;
 
+// Speration Of Concern Principle
+// Don't Repeat Yourself Principle
 public class LoadRegistration {
 
     public static void main(String[] args) {
@@ -51,17 +53,31 @@ public class LoadRegistration {
                                 System.out.println("[3] Exit");
                                 System.out.print("Enter your choice: ");
                                 goPromoChoice = scanner.nextInt();
-                                
+
                                 if (goPromoChoice == 1) {
                                     System.out.println("You are now subscribed to Go+99. Enjoy 20GB of data. Valid for 5 Days.");
                                 } else if (goPromoChoice == 2) {
                                     // back
                                 } else if (goPromoChoice == 3) {
-                                    System.out.println("* Thank you! *");
+                                    System.out.println("Are you sure you want to exit? \n[Y] Yes [N] No");
+                                    System.out.print("Enter your choice: ");
+                                    char exitChoice = scanner.nextLine().trim().toUpperCase().charAt(0);
+                                    switch (exitChoice) {
+                                        case 'Y':
+                                            System.out.println("* Thank you *");
+                                            running = false;
+                                            break;
+                                        case 'N':
+                                            System.out.println("Go Back to Main Menu");
+                                            break;
+                                        default:
+                                            System.out.println("Invalid Input!");
+                                            break;
+                                    }
                                 } else {
                                     System.out.println("Invalid Input!");
                                 }
-                                
+
                             } else if (goPromoChoice == 2) {
                                 System.out.println("\nGet 40 GB total data!");
                                 System.out.println("[1] Subscribe");
@@ -69,20 +85,35 @@ public class LoadRegistration {
                                 System.out.println("[3] Exit");
                                 System.out.print("Enter your choice: ");
                                 goPromoChoice = scanner.nextInt();
-                                
+
                                 if (goPromoChoice == 1) {
                                     System.out.println("You are now subscribed to Go+129. Enjoy 40GB of data. Valid for 7 Days.");
                                 } else if (goPromoChoice == 2) {
                                     // back
                                 } else if (goPromoChoice == 3) {
-                                    System.out.println("* Thank you! *");
+                                    System.out.println("Are you sure you want to exit? \n[Y] Yes [N] No");
+                                    System.out.print("Enter your choice: ");
+                                    char exitChoice = scanner.nextLine().trim().toUpperCase().charAt(0);
+                                    switch (exitChoice) {
+                                        case 'Y':
+                                            System.out.println("* Thank you *");
+                                            running = false;
+                                            break;
+                                        case 'N':
+                                            System.out.println("Go Back to Main Menu");
+                                            break;
+                                        default:
+                                            System.out.println("Invalid Input!");
+                                            break;
+                                    }
                                 } else {
                                     System.out.println("Invalid Input!");
                                 }
-                                
+
                             } else if (goPromoChoice == 3) {
-                                
-                            }   break;
+
+                            }
+                            break;
                         case 2:
                             System.out.println("SuperGo99 Promo");
                             System.out.println("[1] Super99");
@@ -92,15 +123,16 @@ public class LoadRegistration {
                             int superGoPromo = scanner.nextInt();
                             switch (superGoPromo) {
                                 case 1:
-                                    System.out.println("\nGet 20 GB total data!");
+                                    System.out.println("\nGet 70 GB total data!");
                                     System.out.println("[1] Subscribe");
                                     System.out.println("[2] Back");
                                     System.out.println("[3] Exit");
                                     System.out.print("Enter  your choice: ");
                                     superGoPromo = scanner.nextInt();
                                 case 2:
-                                    
-                            }   break;
+
+                            }
+                            break;
                         case 3:
                             System.out.println("Enjoy GoEXTRA");
                             break;
@@ -124,7 +156,8 @@ public class LoadRegistration {
                                     break;
                                 default:
                                     System.out.println("Invalid Input!");
-                            }   break;
+                                    break;
+                            }
                         default:
                             System.out.println("Invalid Input!");
                             break;
@@ -132,7 +165,7 @@ public class LoadRegistration {
                 } catch (Exception e) {
                     System.out.println("Invalid Input. Please enter a valid number.");
                     scanner.nextLine();
-                   
+
                 }
 
             } else {
