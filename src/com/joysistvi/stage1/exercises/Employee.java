@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysistvi.stage2.day14;
+package com.joysistvi.stage1.exercises;
 
-import com.joysistvi.stage2.day16.Employee;
+import com.joysistvi.stage2.day16.Person;
 
 
-public class JavaMethod {
+
+public class Employee extends Person{
+    
+    int employeeId;
     
     public static void main(String[] args) {
         Employee employee = new Employee();
         
     }
     
+    public void computeTax(){
+        
+    }
+    
+    
+    
 }
-
-
-/*
-        void -> does not return anything
-        data type 
-    */
